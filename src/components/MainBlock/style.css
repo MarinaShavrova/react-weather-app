@@ -1,0 +1,44 @@
+.container {
+    max-width: 1170px;
+    height: 80%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    color: white;
+ 
+}
+
+.main-city-wether-icon{
+    padding-top: 5px;
+    width: 60px;
+}
+
+.main-block-h1{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.main-block-h3 {
+    font-size: 15px;
+    letter-spacing: 1.2px;
+}
+
+.main-block-h4 {
+    font-size: 30px;
+    letter-spacing: 1.2px;
+}
+
+.beforeInputCity{
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.padding-text{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#position-right{
+    text-align: right;
+}

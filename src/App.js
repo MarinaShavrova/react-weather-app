@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState }  from 'react';
+import Footer from './components/Footer';
+import { MainBlock } from './components/MainBlock';
+import Search from "./components/Search";
+import Video from './components/Video';
+import {weatherForFiveDays} from './data.js';
+import {
+    Window
+} from './WindowElements';
 
-function App() {
+
+
+const App = () => {
+
+  const [city, setCity] = useState('');
+
+  const handleCityChange = (city) =>{
+    setCity(city);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <Video />
+        <Search onChange = {handleCityChange} />  
+        <Window>
+          <MainBlock  city = {city} data = {weatherForFiveDays}/>
+          <Footer   city = {city} data = {weatherForFiveDays} />   
+        </Window>
+    </>
+          
+  
   );
 }
 
