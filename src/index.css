@@ -9,6 +9,11 @@
 html {
   height: 100vh;
   width: 100%;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {
@@ -16,13 +21,44 @@ code {
     monospace;
 }
 
-.video-background{
-  position: absolute;
+video {
   width: 100%;
-  left: 0;
-  top: 0;
   height: 100vh;
   object-fit: cover;
-  transform: translate(-50, -50%);
-  z-index: -1;
 }
+
+.main {
+  transform: translateX(-100%);
+
+}
+
+.main.active {
+  transform: translateX(0);
+  width: 100%;
+  height: 100vh;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content{
+  height: 100vh;
+  width: 100%;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+

@@ -1,14 +1,11 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import './style.css';
-import {icon, nameDay, monthArr, nameDayShort} from '../../data.js';
-import IconPNG from '../../images/icon.png';
-import Footer from "../Footer";
-import Weather from "../Footer/Weather";
+import {icon, nameDay, monthArr} from '../../data.js';
 
 
 
-export const MainBlock = ({city, data}) =>{
+export const MainBlock = ({city}) =>{
     const [weatherData, setWeatherData] = useState([{ ready: false }]);
     const now = new Date();
    
@@ -57,7 +54,7 @@ const search = () => {
 
     return(
         <>
-             <div className="container all-background ps-5 pe-5 mt-4">                
+             <div className="container all-background ps-5 pe-5 mt-4 mobile">                
                 <div className="row">
                         <div className="col ms-5"> 
                          <img className="main-city-wether-icon" src={weatherData.icon} alt={"logo"} />
@@ -67,7 +64,7 @@ const search = () => {
                                 <h3 className="main-block-h3">{nameDay[now.getDay()]}, {now.getDate()} {monthArr[now.getMonth()]} {now.getFullYear()}</h3>
                                                
                         </div>
-                        <div className="col-6"></div>
+                     
                     <div className="col me-5 pt-1" id="position-right">
                                 <h4  className="main-block-h4">{weatherData.description.toUpperCase()}</h4>
                            
@@ -97,11 +94,7 @@ const search = () => {
         <div className="beforeInputCity">
             <h1 className="main-block-h1">{now.getHours()}:{minutes}</h1>
             <p>{nameDay[now.getDay()]}, {now.getDate()} {monthArr[now.getMonth()]} {now.getFullYear()}</p>
-            <h1  className="main-block-h3">Enter a city to search. Click on icon<span>  &#9755; </span>  
-            <img src={IconPNG} alt="icon" 
-            style={{
-                width: "40px"
-            }}/>
+            <h1  className="main-block-h3">Enter a city to search. Click on icon
             </h1>
         </div>
         </div>

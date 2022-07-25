@@ -1,21 +1,28 @@
 import './style.css';
-import {icon, nameDay, nameDayShort} from '../../data.js';
+import {icon, nameDayShort, dataWeatherAll} from '../../data.js';
 import React, {useState, useEffect} from "react";
-import Weather from './Weather';
 import axios from "axios";
 
-const Footer  = ({city, data}) => {
+
+const Footer  = ({city, data, dataAllData, onChange}) => {
     const [weatherDataDays, setWeatherDataDays] = useState(false);
+    const [dataWeatherAll, setDataWeatherAll] = useState([]);
+    
     let str = "";
     let count = 0;
     let dayOfWeekForArr = "";
-    const now = new Date();
 
           useEffect(() => {
         if(city.length != 0){
-            getWeather();
+            data.splice(0,data.length);
+            getWeather();           
         }
         } , [city, data])
+
+        
+        const handleArrayChange = (dataWeatherAll) => {
+            onChange(dataWeatherAll);
+            }
     
 
         function getWeather(){
@@ -32,10 +39,15 @@ const Footer  = ({city, data}) => {
         let month = now.getMonth()+1;
         let day = now.getDate();
         let dayOfWeek = now.getDay();
+        dataAllData = response.data.list.slice();
+        handleArrayChange(dataAllData);
 
-  
+ console.log("1 " +dataAllData);
+
     for(let i=0; i<response.data.list.length; i++){
     str = response.data.list[i].dt_txt;
+
+    
     
     if(!str.includes(`${year}-${month}-${day}`)){
       if (str.includes('12:00:00')){
@@ -62,7 +74,7 @@ const Footer  = ({city, data}) => {
 
 
 addedDataToArr (dayOfWeekForArr, 
-    response.data.list[i].dt_txt,
+    response.data.list[i].dt_txt.replace(' 12:00:00', ""),
     Math.round(response.data.list[i].main.temp),  
     response.data.list[i].main.humidity,
     response.data.list[i].weather[0].description,
@@ -92,9 +104,9 @@ addedDataToArr (dayOfWeekForArr,
 	}
 
   if (weatherDataDays == true) {
-
+    
      const weather = data.map(product => 
-		
+		<>
 		   <div className="footer-block" key={Math.floor(Math.random() * 1000)}>
                     <div className='position-block'>
                     <h2>{product.dayOfWeek}</h2>
@@ -104,15 +116,21 @@ addedDataToArr (dayOfWeekForArr,
                     <div className='footer-text'>Humidity:{product.humidity} %</div> 
                     <div className='footer-text'>Wind: {product.wind} km/h</div> 
                     </div>
-            </div>		
+            </div>
+               
+            </>
         )
+    
 
     return (
-      <div className="container">
+        <>
+            <div className="container mobile">
                 <div className="footer"> 
-                    {weather}
-                </div>
+                    {weather}               
+                </div>                
             </div>
+           
+        </>
     );
   } 
 }

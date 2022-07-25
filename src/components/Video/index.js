@@ -1,13 +1,9 @@
 
-import videoBackground from '../Video/video/autumn.mp4'
+const Video = ({type}) =>{
 
-const Video = () =>{
-
-    return (
-         <video className='video-background' autoPlay loop muted>
-            <source src={videoBackground} type="video/mp4" />
-        </video>
-    )
+    return (    
+         <video className="video-background" src={type} type="video/mp4" autoPlay loop muted />
+         )
 }
 
 export default Video;

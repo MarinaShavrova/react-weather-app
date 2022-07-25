@@ -33,7 +33,7 @@ const handleCityChange = (event) => {
          }
     }
 
-
+  
 function clickOnButton () {
     let element = document.querySelector('#navbarToggleExternalContent');
 
@@ -52,16 +52,22 @@ const blurHandler = (e) => {
             }
         }
 
+    const handleKeyPress = (e) => {
+        if(e.key == 'Enter') {
+            onChange(city);
+            }
+        }
+
     return(
      <div className="pos-f-t">
         <div className={value} id="navbarToggleExternalContent">
             <div className="navbar navbar-dark bg-dark">
                 <div className="col">
                     {(cityDirty && cityError) && <div style={{color:'red'}}>{cityError}</div>}
-                    <input value={city} onBlur={e => blurHandler(e)} onChange={e => cityHandler(e)} className="form-control mr-sm-2 bg-dark" type="search" placeholder="Search" aria-label="Search" id="search-input"/>
+                    <input onKeyPress={handleKeyPress} value={city} onBlur={e => blurHandler(e)} onChange={e => cityHandler(e)} className="form-control mr-sm-2 bg-dark" type="search" placeholder="Search" aria-label="Search" id="search-input"/>
                 </div>
                 <div className="col">
-                    <button disabled={!formValid} onClick={handleCityChange} className="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                    <button  disabled={!formValid} onClick={handleCityChange} className="btn btn-outline-light my-2 my-sm-0" type="submit" >Search</button>
                 </div>
             </div>
         </div>

@@ -112,7 +112,11 @@ export const monthArr =[
 ];
 
 
- export const weatherForFiveDays = [];
+ export const weatherForFiveDays = [
+ ];
 
+export const weatherAllData = [
+];
 
-
+export const dataWeatherAll = [       
+]

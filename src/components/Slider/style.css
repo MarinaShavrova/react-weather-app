@@ -1,0 +1,125 @@
+.slider-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 100%;
+}
+
+
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: whitesmoke;
+    flex-direction: column;
+}
+
+.slide.active {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    font-size: 3rem;
+    color: azure;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    font-size: 3rem;
+    color: azure;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slider-all-data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+}
+
+.slider-block{
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.lineChart{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.slider-flex{
+    display: flex;
+        justify-content: space-center;
+        align-items: center;     
+}
+
+.slider-block-h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+@media (max-width:1000px) {
+    .container {
+            padding-top: 10px;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+
+    .slider-block-h1 {
+    font-size: 40px;
+    font-weight: bold;
+    }
+
+    .slider-flex{
+        flex-direction: column;     
+    }
+
+    .slider-all-data{
+        display: flex;
+        font-size: 12px;
+    }
+
+    .right-arrow,
+    .left-arrow {
+            font-size: 2rem;        
+    }
+ 
+    .slider-block {
+        padding: 10px;
+     }
+     .slider-all-data{
+        width: 100%;
+     }
+
+  .lineChart{
+    visibility: hidden;
+  }
+}
