@@ -61,4 +61,8 @@ video {
   background-color: rgb(0, 0, 0, 0.4);
 }
 
-
+@media (max-width:1000px) {
+  video {
+    height: 100%;
+  }
+}

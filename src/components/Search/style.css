@@ -6,3 +6,9 @@
     width: 100%;
 }
 
+@media (max-width:1000px) {
+    .pos-f-t {
+        height: 10%;
+    }
+
+}
