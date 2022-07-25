@@ -102,7 +102,7 @@ if(state === true){
 return(
 <> 
     
-    <div className='main-content'>  
+    <div className='second-layout'>  
         <Video type={videoBackgroundSecond}/>   
         <div className='slider-content'>
         <Slider slides = {weatherAllData}/>           
