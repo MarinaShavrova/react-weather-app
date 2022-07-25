@@ -31,7 +31,7 @@ return(
             <div className={index === current ? 'slide active' : 'slide'} key={index}>
                 {index === current && (
                     <>
-                    <div className="container container-sm">                
+                    <div className="container container-sm mobile">                
                         <div className="row">
                                 <div className="col ms-5"> 
                                     <img className="main-city-wether-icon"  src={slide.icon} />
