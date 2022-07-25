@@ -8,7 +8,6 @@ const Search = ({ onChange }) =>{
     const [cityDirty, setCityDirty] = useState('');
     const[formValid, setFormValid] = useState(false);
 
-
 useEffect( () => {
     if(cityError){
 setFormValid(false);
@@ -35,6 +34,7 @@ const handleCityChange = (event) => {
 
   
 function clickOnButton () {
+
     let element = document.querySelector('#navbarToggleExternalContent');
 
      if (element.className === "collapse" ){

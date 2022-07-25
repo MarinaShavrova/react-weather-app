@@ -1,12 +1,11 @@
 import './style.css';
-import {icon, nameDayShort, dataWeatherAll} from '../../data.js';
+import {icon, nameDayShort} from '../../data.js';
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
 
 const Footer  = ({city, data, dataAllData, onChange}) => {
     const [weatherDataDays, setWeatherDataDays] = useState(false);
-    const [dataWeatherAll, setDataWeatherAll] = useState([]);
     
     let str = "";
     let count = 0;
@@ -14,7 +13,7 @@ const Footer  = ({city, data, dataAllData, onChange}) => {
 
           useEffect(() => {
         if(city.length != 0){
-            data.splice(0,data.length);
+            data.splice(0,data.length);        
             getWeather();           
         }
         } , [city, data])
@@ -39,7 +38,7 @@ const Footer  = ({city, data, dataAllData, onChange}) => {
         let month = now.getMonth()+1;
         let day = now.getDate();
         let dayOfWeek = now.getDay();
-        dataAllData = response.data.list.slice();
+        dataAllData = response.data.list.slice(0);
         handleArrayChange(dataAllData);
 
 
@@ -85,6 +84,7 @@ addedDataToArr (dayOfWeekForArr,
 }
 }
      }
+      
     }
 
     function addedDataToArr(dayOfWeek, date, temp,humidity, description,icon, wind  ){
@@ -100,6 +100,7 @@ addedDataToArr (dayOfWeekForArr,
             "icon": icon,
             "wind":wind
         }); 
+       
         setWeatherDataDays(true)
 	}
 

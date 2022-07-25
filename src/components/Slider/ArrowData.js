@@ -1,4 +1,4 @@
-import {weatherForFiveDays, weatherAllData, icon} from "../../data.js"
+import {weatherForFiveDays, weatherAllData, dataWeatherAll} from "../../data.js"
 import React, {useState, useEffect} from "react";
 import videoBackgroundSecond from '../Video/video/waterfall.mp4'
 import Slider from "./index.js";
@@ -6,21 +6,20 @@ import Video from "../Video/index.js";
 
 const ArrowDate = ({allArrayWeather}) =>{
     let [state, setState] = useState(false);
-     let iconForFront =  null;
+    let iconForFront =  null;
+    let arraySortByDate = [];
 
      useEffect(() => {
-  console.log("TEST!")
-  console.log("1 "+weatherForFiveDays.length )
-  console.log("2 "+allArrayWeather.length)
-  if(allArrayWeather.length != 0 || weatherForFiveDays.length != 0){
-    console.log("+++!")
-    onClickArray();
+        if(allArrayWeather.length != 0 || weatherForFiveDays.length != 0){
+            onClickArray();
+        }else{
+            allArrayWeather.splice(0,allArrayWeather.length);
+            weatherForFiveDays.splice(0,weatherForFiveDays.length);
+            dataWeatherAll.splice(0,dataWeatherAll.length);
+            weatherAllData.splice(0,weatherAllData.length);
+            setState(false);
   }
-        } , [allArrayWeather || weatherForFiveDays])
-    
-   
-
-    let arraySortByDate = [];
+        } , [allArrayWeather || weatherForFiveDays])   
 
 
 function sortByDate(date, dayOfWeek, icon, temp, humidity, wind, description){
@@ -80,22 +79,18 @@ for (let index = 0; index < weatherForFiveDays.length; index++) {
         weatherForFiveDays[index].temp,
         weatherForFiveDays[index].humidity, 
         weatherForFiveDays[index].wind,  
-        weatherForFiveDays[index].description
-           
+        weatherForFiveDays[index].description           
         )
-
-
-}
+    }
 setState(true);
 }
 
 
 
 if(state === true){
-    console.log(weatherAllData)
+
 return(
-<> 
-    
+<>     
     <div className='second-layout'>  
         <Video type={videoBackgroundSecond}/>   
         <div className='slider-content'>
@@ -105,7 +100,9 @@ return(
 </>
 
 )
+
 } 
+
 }
 
 export default ArrowDate;

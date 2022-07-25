@@ -16,6 +16,8 @@ export const MainBlock = ({city}) =>{
     } , [city])
 
     function showTemp(response) {
+         console.log("response.data")
+        console.log(response.data)
         let iconForFront =  null;
         for (let index = 0; index < icon.length; index++) {
             if(icon[index].key == response.data.weather[0].icon){
@@ -45,7 +47,10 @@ const search = () => {
     let unitsType = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unitsType}`;
     
-   axios.get(apiUrl).then(showTemp);
+   axios.get(apiUrl).then(showTemp).catch(err => { 
+   alert("City name entered incorrectly! Please enter a name in English!");
+  })
+
     }
   }
 

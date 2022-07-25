@@ -9,17 +9,21 @@ import videoBackgroundFirst from './components/Video/video/beach.mp4'
 
 
 
+
 const App = () => {
-   const [city, setCity] = useState('');
-   const [dataWeatherAll, setDataWeatherAll] = useState([]);
+
+const initialState = []
+let [dataWeatherAll, setDataWeatherAll] = useState(initialState);
+const [city, setCity] = useState('');
+
     
    const handleArrayChange = (dataWeatherAll) =>{  
     setDataWeatherAll(dataWeatherAll);
-    console.log("2+ "+dataWeatherAll)
   }
 
 
   const handleCityChange = (city) =>{  
+    setDataWeatherAll(initialState);
     setCity(city);
   }
 
