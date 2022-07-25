@@ -5,7 +5,7 @@ import Search from "./components/Search";
 import ArrowDate from './components/Slider/ArrowData';
 import Video from './components/Video';
 import {weatherForFiveDays, weatherAllData, dataWeatherAll} from './data.js';
-import videoBackgroundFirst from './components/Video/video/autumn.mp4'
+import videoBackgroundFirst from './components/Video/video/beach.mp4'
 
 
 

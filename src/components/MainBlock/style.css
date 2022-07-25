@@ -19,7 +19,7 @@
 }
 
 .main-block-h3 {
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 1.2px;
 }
 
@@ -45,8 +45,8 @@
 
 
 @media (max-width:1000px) {
-    .container.mobile{
-        padding-top: 60px;
+    .container.mobile-main{
+        padding-top: 30px;
         width: 100%;
         margin: 0 auto;
     }

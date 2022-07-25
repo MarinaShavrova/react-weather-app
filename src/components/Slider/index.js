@@ -32,7 +32,7 @@ return(
                 {index === current && (
                     <>
                     <div className="container container-sm mobile">                
-                        <div className="row">
+                        <div className="row pt-4">
                                 <div className="col ms-5"> 
                                     <img className="main-city-wether-icon"  src={slide.icon} />
                                     <div className="slider-block-h1">{slide.dayOfWeek}</div>
@@ -58,8 +58,9 @@ return(
                                     return(
                                         <div key={key} className="slider-block">
                                         <div  className="slider-dt_txt-block">{slide.dt_txt.replace(slide.date, "")}</div>
-                                        <div className="slider-description-block">{slide.description}</div> 
-                                        <img className="footer-icon"  src={slide.icon} /> <div className="slider-speed-block">{slide.speed} km/h</div> 
+                                        <div className="slider-description-block">{slide.description.toUpperCase()}</div> 
+                                        <img className="footer-icon"  src={slide.icon} /> 
+                                        <div className="slider-speed-block">{slide.temp}°</div> 
                                         </div>
                                             )
                                 }))}

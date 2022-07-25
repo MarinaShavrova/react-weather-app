@@ -1,6 +1,6 @@
 import {weatherForFiveDays, weatherAllData, icon} from "../../data.js"
 import React, {useState, useEffect} from "react";
-import videoBackgroundSecond from '../Video/video/second_autumn.mp4'
+import videoBackgroundSecond from '../Video/video/waterfall.mp4'
 import Slider from "./index.js";
 import Video from "../Video/index.js";
 

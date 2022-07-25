@@ -112,9 +112,9 @@ addedDataToArr (dayOfWeekForArr,
                     <h2>{product.dayOfWeek}</h2>
                     <img className="footer-icon"  src={product.icon} />
                     <div className='footer-text'>{product.temp}°</div>
-                    <div className='footer-text'>{product.description}</div>
-                    <div className='footer-text'>Humidity:{product.humidity} %</div> 
-                    <div className='footer-text'>Wind: {product.wind} km/h</div> 
+                    <div className='footer-text'>{product.description.toUpperCase()}</div>
+                    <div className='footer-text'>Humidity: {product.humidity}%</div> 
+                    <div className='footer-text'>Wind: {product.wind}km/h</div> 
                     </div>
             </div>
                

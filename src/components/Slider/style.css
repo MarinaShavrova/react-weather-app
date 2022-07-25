@@ -1,7 +1,7 @@
 .second-layout{
     height: 100vh;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .second-layout video{
@@ -88,7 +88,8 @@
 .slider-flex{
     display: flex;
         justify-content: space-center;
-        align-items: center;     
+        align-items: center;    
+        padding-bottom: 50px; 
 }
 
 .slider-block-h1{
@@ -98,9 +99,11 @@
 
 
 @media (max-width: 1000px) {
-    .container {
-            width: 100%;
-        }
+    .container.mobile {
+        padding-top: 90px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
 
     .slider-block-h1 {

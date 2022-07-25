@@ -54,7 +54,7 @@ const search = () => {
 
     return(
         <>
-             <div className="container all-background ps-5 pe-5 mt-4 mobile">                
+             <div className="container all-background ps-5 pe-5 mt-4 mobile-main">                
                 <div className="row">
                         <div className="col ms-5"> 
                          <img className="main-city-wether-icon" src={weatherData.icon} alt={"logo"} />

@@ -1,7 +1,5 @@
 .width-footer {
-    max-width: 1170px;
-    width: 80%;
-    height: 100%;
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -11,7 +9,9 @@
 
 .footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 70px;
 }
 .footer-block{
     text-align: center;
@@ -26,7 +26,7 @@
 }
 
 .footer-text{
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .footer-icon{
@@ -44,11 +44,19 @@
 }
 
 @media (max-width:1000px) {
+    .width-footer {
+       width: 100%;
+        position: relative;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0;
+    }
     .footer{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+       
     }
 
     .footer h2{
@@ -57,10 +65,11 @@
 
 
     .position-block {
-            bottom: 10px;
-            margin-right: 5px;
-            margin-left: 5px;
-            padding: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 3px;
+        margin-left: 3px;
+        padding: 0px;
     }
     
     .footer-text {
