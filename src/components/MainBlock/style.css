@@ -46,7 +46,7 @@
 
 @media (max-width:1000px) {
     .container.mobile{
-        padding-top: 30px;
+        padding-top: 60px;
         width: 100%;
         margin: 0 auto;
     }
