@@ -2,6 +2,7 @@
     height: 100vh;
     width: 100%;
     padding-top: 100px;
+    
 }
 
 .second-layout video{
@@ -69,20 +70,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50%;
+    width: 750px;
 }
 
 .slider-block{
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     
 }
 
 .lineChart{
-    width: 40%;
+    width: 450px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+   align-items: center;
 }
 
 .slider-flex{
