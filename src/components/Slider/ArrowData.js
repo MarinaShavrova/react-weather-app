@@ -24,24 +24,17 @@ const ArrowDate = ({allArrayWeather}) =>{
 
 
 function sortByDate(date, dayOfWeek, icon, temp, humidity, wind, description){
-    console.log("foreach")
-        console.log(date)
-        console.log("other")
-        console.log(allArrayWeather)
+ 
      allArrayWeather.forEach(element => {
-     
-     if(element.dt_txt.indexOf(date) !== -1){
-
-       
-
-        for (let index = 0; index < icon.length; index++) {
-            if(icon[index].key == element.weather[0].icon.substring(0,2)+'n'){
-                iconForFront = icon[index].value;
-                break;       
-            }else{
-                iconForFront = `http://openweathermap.org/img/wn/${element.weather[0].icon.substring(0,2)+'n'}@2x.png`;
-            }    
-        }
+        if(element.dt_txt.indexOf(date) !== -1){            
+            for (let index = 0; index < icon.length; index++) {
+                    if(icon[index].key == element.weather[0].icon.substring(0,2)+'n'){
+                        iconForFront = icon[index].value;
+                        break;       
+                    }else{
+                        iconForFront = `http://openweathermap.org/img/wn/${element.weather[0].icon.substring(0,2)+'n'}@2x.png`;
+                    }    
+                }
 
 
             arraySortByDate.push(
@@ -76,6 +69,7 @@ weatherAllData.push(
     arraySortByDate = [];
 
 }
+
     function onClickArray(){    
 
 for (let index = 0; index < weatherForFiveDays.length; index++) {

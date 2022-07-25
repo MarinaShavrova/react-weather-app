@@ -42,12 +42,12 @@ const Footer  = ({city, data, dataAllData, onChange}) => {
         dataAllData = response.data.list.slice();
         handleArrayChange(dataAllData);
 
- console.log("1 " +dataAllData);
 
     for(let i=0; i<response.data.list.length; i++){
     str = response.data.list[i].dt_txt;
-
     
+    if(month<10) month = '0'+month;
+    if(day<10) day = '0'+day;    
     
     if(!str.includes(`${year}-${month}-${day}`)){
       if (str.includes('12:00:00')){
@@ -124,7 +124,7 @@ addedDataToArr (dayOfWeekForArr,
 
     return (
         <>
-            <div className="container mobile">
+            <div className="width-footer">
                 <div className="footer"> 
                     {weather}               
                 </div>                

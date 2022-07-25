@@ -1,7 +1,16 @@
+.width-footer {
+    max-width: 1170px;
+    width: 80%;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    color: white;
+    padding-top: 30px;
+}
 
 .footer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 .footer-block{
@@ -35,11 +44,10 @@
 }
 
 @media (max-width:1000px) {
-    .container.mobile{
-        width: 100%;
-    }
     .footer{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     }
 
     .footer h2{
