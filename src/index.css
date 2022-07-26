@@ -10,16 +10,37 @@ body{
  background: #212529;
 }
 
+/* Работает в Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(5, 155, 248, 0.854) rgba(255, 251, 0, 0.763);
+}
+
+/* Работает в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 251, 0, 0.763);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 5px solid rgba(5, 155, 248, 0.854);
+}
+
 html {
   height: 100vh;
   width: 100%;
-  scrollbar-width: none;
+ /* scrollbar-width: none;*/
 }
-
-body::-webkit-scrollbar {
+/*
+::-webkit-scrollbar {
   display: none;
 }
-
+*/
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

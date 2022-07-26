@@ -1,11 +1,11 @@
 import React, { useState }  from 'react';
-import Footer from './components/Footer';
-import { MainBlock } from './components/MainBlock';
+import DataForFiveDay from './components/DataForFiveDay';
+import {DataForToday}  from './components/DataForToday';
 import Search from "./components/Search";
 import ArrowDate from './components/Slider/ArrowData';
-import Video from './components/Video';
-import {weatherForFiveDays, weatherAllData, dataWeatherAll} from './data.js';
-import videoBackgroundFirst from './components/Video/video/beach.mp4'
+import Video from './components/Assets/';
+import {weatherForFiveDays, weatherAllData} from './components/Assets/data.js';
+import videoBackgroundFirst from './components/Assets/video/beach.mp4'
 
 
 
@@ -37,8 +37,8 @@ const [city, setCity] = useState('');
       <Video type={videoBackgroundFirst}/>   
       <div className='content'>
         <Search onChange = {handleCityChange} />
-        <MainBlock  city = {city} />
-        <Footer   city = {city} data = {weatherForFiveDays} dataAllData = {weatherAllData} onChange = {handleArrayChange} />
+        <DataForToday  city = {city} />
+        <DataForFiveDay   city = {city} data = {weatherForFiveDays} dataAllData = {weatherAllData} onChange = {handleArrayChange} />
         </div>
         <ArrowDate  allArrayWeather = {dataWeatherAll}/> 
       </div>

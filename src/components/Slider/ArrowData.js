@@ -1,8 +1,8 @@
-import {weatherForFiveDays, weatherAllData, dataWeatherAll} from "../../data.js"
+import {weatherForFiveDays, weatherAllData, dataWeatherAll} from "../Assets/data.js"
 import React, {useState, useEffect} from "react";
-import videoBackgroundSecond from '../Video/video/waterfall.mp4'
+import videoBackgroundSecond from '../Assets/video/waterfall.mp4'
 import Slider from "./index.js";
-import Video from "../Video/index.js";
+import Video from "../Assets/index.js";
 
 const ArrowDate = ({allArrayWeather}) =>{
     let [state, setState] = useState(false);

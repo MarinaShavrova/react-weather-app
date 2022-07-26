@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import './style.css';
-import {icon, nameDay, monthArr} from '../../data.js';
+import {icon, nameDay, monthArr} from '../Assets/data.js';
 
 
 
-export const MainBlock = ({city}) =>{
+export const DataForToday = ({city}) =>{
     const [weatherData, setWeatherData] = useState([{ ready: false }]);
     const now = new Date();
    

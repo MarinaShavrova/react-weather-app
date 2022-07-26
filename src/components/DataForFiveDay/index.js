@@ -1,5 +1,5 @@
 import './style.css';
-import {icon, nameDayShort} from '../../data.js';
+import {icon, nameDayShort} from '../Assets/data.js';
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
