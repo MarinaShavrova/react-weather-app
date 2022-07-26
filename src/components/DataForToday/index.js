@@ -95,7 +95,7 @@ const search = () => {
  
     return(
         <>
-        <div className="container all-background ps-5 pe-5 mt-4"> 
+        <div className="container all-background ps-5 pe-5 mt-5"> 
         <div className="beforeInputCity">
             <h1 className="main-block-h1">{now.getHours()}:{minutes}</h1>
             <p>{nameDay[now.getDay()]}, {now.getDate()} {monthArr[now.getMonth()]} {now.getFullYear()}</p>

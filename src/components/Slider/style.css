@@ -123,6 +123,8 @@
     .slider-all-data{
         display: flex;
         font-size: 12px;
+        justify-content: center;
+        align-items: center;
     }
 
     .right-arrow,

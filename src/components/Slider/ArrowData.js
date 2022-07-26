@@ -1,4 +1,4 @@
-import {weatherForFiveDays, weatherAllData, dataWeatherAll} from "../Assets/data.js"
+import {weatherForFiveDays, weatherAllData, dataWeatherAll, icon} from "../Assets/data.js"
 import React, {useState, useEffect} from "react";
 import videoBackgroundSecond from '../Assets/video/waterfall.mp4'
 import Slider from "./index.js";
@@ -22,10 +22,12 @@ const ArrowDate = ({allArrayWeather}) =>{
         } , [allArrayWeather || weatherForFiveDays])   
 
 
-function sortByDate(date, dayOfWeek, icon, temp, humidity, wind, description){
- 
+function sortByDate(date, dayOfWeek, icons, temp, humidity, wind, description){
+ console.log(icon)
      allArrayWeather.forEach(element => {
-        if(element.dt_txt.indexOf(date) !== -1){            
+        if(element.dt_txt.indexOf(date) !== -1){  
+            
+            let iconForFront =  null;          
             for (let index = 0; index < icon.length; index++) {
                     if(icon[index].key == element.weather[0].icon.substring(0,2)+'n'){
                         iconForFront = icon[index].value;
@@ -57,7 +59,7 @@ weatherAllData.push(
     {
         date : date,
         dayOfWeek :dayOfWeek, 
-        icon : icon, 
+        icon : icons, 
         temp : temp, 
         humidity : humidity, 
         wind : wind, 

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {FaRegArrowAltCircleRight, FaRegArrowAltCircleLeft} from "react-icons/fa"
 import LineChart from "../LineChart";
+import {icon} from '../Assets/data.js';
 import "./style.css"
 
 const Slider = ({slides}) =>{
