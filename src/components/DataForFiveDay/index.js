@@ -1,5 +1,5 @@
 import './style.css';
-import {icon, nameDayShort} from '../Assets/data.js';
+import {icon, nameDayShort, nameDay} from '../Assets/data.js';
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
@@ -10,6 +10,7 @@ const Footer  = ({city, data, dataAllData, onChange}) => {
     let str = "";
     let count = 0;
     let dayOfWeekForArr = "";
+    let dayOfWeekAll = "";
 
           useEffect(() => {
         if(city.length != 0){
@@ -54,10 +55,12 @@ const Footer  = ({city, data, dataAllData, onChange}) => {
             if(dayOfWeek === 6 || (Number(dayOfWeek)+count) === 6){
                 dayOfWeek = 0;
                 count = 0;
-                dayOfWeekForArr = nameDayShort[0];             
+                dayOfWeekForArr = nameDayShort[0];  
+                dayOfWeekAll = nameDay[0]           
             }  else {
                 count++;
-                dayOfWeekForArr = nameDayShort[Number(dayOfWeek)+count];                              
+                dayOfWeekForArr = nameDayShort[Number(dayOfWeek)+count];    
+                dayOfWeekAll = nameDay[Number(dayOfWeek)+count];                           
             }
 
             let iconForFront =  null;
@@ -78,7 +81,8 @@ addedDataToArr (dayOfWeekForArr,
     response.data.list[i].main.humidity,
     response.data.list[i].weather[0].description,
     iconForFront,
-    response.data.list[i].wind.speed
+    response.data.list[i].wind.speed,
+    dayOfWeekAll
     );
 
 }
@@ -87,18 +91,19 @@ addedDataToArr (dayOfWeekForArr,
       
     }
 
-    function addedDataToArr(dayOfWeek, date, temp,humidity, description,icon, wind  ){
+    function addedDataToArr(dayOfWeek, date, temp,humidity, description,icon, wind,dayOfWeekAll  ){
 		 console.log(data)
 			data.push({
             ready: true,
             id : new Date(),
-            "dayOfWeek": dayOfWeek,
-            "date":date,
-            "temp":temp,
-            "humidity":humidity,
-            "description":description,
-            "icon": icon,
-            "wind":wind
+            dayOfWeek: dayOfWeek,
+            date:date,
+            temp:temp,
+            humidity:humidity,
+            description:description,
+            icon: icon,
+            wind:wind,
+            dayOfWeekAll:dayOfWeekAll
         }); 
        
         setWeatherDataDays(true)

@@ -22,7 +22,7 @@ const ArrowDate = ({allArrayWeather}) =>{
         } , [allArrayWeather || weatherForFiveDays])   
 
 
-function sortByDate(date, dayOfWeek, icons, temp, humidity, wind, description){
+function sortByDate(date, dayOfWeekAll, icons, temp, humidity, wind, description){
  console.log(icon)
      allArrayWeather.forEach(element => {
         if(element.dt_txt.indexOf(date) !== -1){  
@@ -58,7 +58,7 @@ function sortByDate(date, dayOfWeek, icons, temp, humidity, wind, description){
 weatherAllData.push(
     {
         date : date,
-        dayOfWeek :dayOfWeek, 
+        dayOfWeek :dayOfWeekAll, 
         icon : icons, 
         temp : temp, 
         humidity : humidity, 
@@ -76,7 +76,7 @@ weatherAllData.push(
 for (let index = 0; index < weatherForFiveDays.length; index++) {
 
     sortByDate(weatherForFiveDays[index].date, 
-        weatherForFiveDays[index].dayOfWeek,
+        weatherForFiveDays[index].dayOfWeekAll,
         weatherForFiveDays[index].icon,
         weatherForFiveDays[index].temp,
         weatherForFiveDays[index].humidity, 
