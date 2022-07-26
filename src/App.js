@@ -9,7 +9,6 @@ import videoBackgroundFirst from './components/Assets/video/beach.mp4'
 
 
 
-
 const App = () => {
 
 const initialState = []
@@ -28,9 +27,7 @@ const [city, setCity] = useState('');
   }
 
 
-
   return (
-    <>
    <div className='main-content'>
     <div className='main-content'>  
     <div className='overlay'></div>  
@@ -42,10 +39,7 @@ const [city, setCity] = useState('');
         </div>
         <ArrowDate  allArrayWeather = {dataWeatherAll}/> 
       </div>
-   </div>
-   
-    </>      
-  
+   </div>  
   );
 }
 

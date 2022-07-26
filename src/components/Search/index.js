@@ -1,5 +1,6 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect, useContext }  from 'react';
 import './style.css';
+import Context from "../../context";
 
 const Search = ({ onChange }) =>{
     let [value, setValue] = useState('collapse');
@@ -8,15 +9,15 @@ const Search = ({ onChange }) =>{
     const [cityDirty, setCityDirty] = useState('');
     const[formValid, setFormValid] = useState(false);
 
-useEffect( () => {
-    if(cityError){
-setFormValid(false);
-    } else{
-        setFormValid(true);
-    }
-} , [cityError]
 
-)
+    useEffect( () => {
+        if(cityError){
+    setFormValid(false);
+        } else{
+            setFormValid(true);
+        }
+    } , [cityError])
+
 
 const handleCityChange = (event) => {
     event.preventDefault();
@@ -32,17 +33,6 @@ const handleCityChange = (event) => {
          }
     }
 
-  
-function clickOnButton () {
-
-    let element = document.querySelector('#navbarToggleExternalContent');
-
-     if (element.className === "collapse" ){
-        setValue("collapse show");
-     } else if (element.className === "collapse show" ){
-         setValue("collapse");
-     }
-}
 
 const blurHandler = (e) => {
         switch (e.target.city){
@@ -72,7 +62,10 @@ const blurHandler = (e) => {
             </div>
         </div>
         <nav className="navbar navbar-dark bg-dark">
-            <button onClick={clickOnButton} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button onClick={()=> 
+                (document.querySelector('#navbarToggleExternalContent').className === "collapse" ) 
+                ? document.querySelector('#navbarToggleExternalContent').className = "collapse show" 
+                : document.querySelector('#navbarToggleExternalContent').className = "collapse"} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon test"></span>
             </button>
         </nav>

@@ -1,23 +1,25 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import './style.css';
 import {icon, nameDay, monthArr} from '../Assets/data.js';
+import Context from "../../context.js";
+import iconMainScreen from '../Assets/images/icon.png'
 
 
 
 export const DataForToday = ({city}) =>{
     const [weatherData, setWeatherData] = useState([{ ready: false }]);
+    const {clickOnButton} = useContext(Context);
     const now = new Date();
    
+
     useEffect(() => {
         if(city.length != 0){
             search();
         }
-    } , [city])
+    } , [city]);
 
     function showTemp(response) {
-         console.log("response.data")
-        console.log(response.data)
         let iconForFront =  null;
         for (let index = 0; index < icon.length; index++) {
             if(icon[index].key == response.data.weather[0].icon){
@@ -53,7 +55,6 @@ const search = () => {
 
     }
   }
-
 
   if (weatherData.ready) {
 
@@ -101,6 +102,14 @@ const search = () => {
             <p>{nameDay[now.getDay()]}, {now.getDate()} {monthArr[now.getMonth()]} {now.getFullYear()}</p>
             <h1  className="main-block-h3">Enter a city to search. Click on icon
             </h1>
+            <button className="button-main-screen"
+            onClick={()=> 
+                (document.querySelector('#navbarToggleExternalContent').className === "collapse" ) 
+                ? document.querySelector('#navbarToggleExternalContent').className = "collapse show" 
+                : document.querySelector('#navbarToggleExternalContent').className = "collapse"}>
+                 <span>&#10139;</span><img src={iconMainScreen} alt="icon"/>      
+
+                </button>
         </div>
         </div>
         
