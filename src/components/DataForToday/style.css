@@ -1,102 +1,98 @@
 .container {
-    max-width: 1170px;
-    height: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-    color: white;
-    padding-top: 15px; 
+  max-width: 1170px;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  color: white;
+  padding-top: 15px;
 }
 
-.main-city-wether-icon{
-    padding-top: 5px;
-    width: 60px;
+.main-city-wether-icon {
+  padding-top: 5px;
+  width: 60px;
 }
 
-.main-block-h1{
-    font-size: 70px;
-    font-weight: bold;
+.main-block-h1 {
+  font-size: 70px;
+  font-weight: bold;
 }
 
 .main-block-h3 {
-    font-size: 18px;
-    letter-spacing: 1.2px;
+  font-size: 18px;
+  letter-spacing: 1.2px;
 }
 
 .main-block-h4 {
-    font-size: 24px;
-    letter-spacing: 1.2px;
+  font-size: 24px;
+  letter-spacing: 1.2px;
 }
 
-.beforeInputCity{
-    text-align: center;
-    padding-top: 10px;
-
+.beforeInputCity {
+  text-align: center;
+  padding-top: 10px;
 }
 
-.padding-text{
-    padding: 10px;
-    font-weight: bold;
-    font-size: 20px;
+.padding-text {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.button-main-screen{
-    background: none;
-    border: none;
+.button-main-screen {
+  background: none;
+  border: none;
 }
-.button-main-screen span{
+.button-main-screen span {
   color: white;
   font-size: 25px;
   margin: 5px;
 }
 
-
-.button-main-screen img{
-    width: 20px;
-    padding-bottom: 10px;
-    margin: 5px;
+.button-main-screen img {
+  width: 20px;
+  padding-bottom: 10px;
+  margin: 5px;
 }
-#position-right{
-    text-align: right;
+#position-right {
+  text-align: right;
 }
 
+@media (max-width: 1000px) {
+  .container.mobile-main {
+    padding-top: 30px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-@media (max-width:1000px) {
-    .container.mobile-main{
-        padding-top: 30px;
-        width: 100%;
-        margin: 0 auto;
-    }
+  .main-city-wether-icon {
+    padding-top: 5px;
+    width: 30px;
+  }
 
-        .main-city-wether-icon {
-            padding-top: 5px;
-            width: 30px;
-        }
-    
-        .main-block-h1 {
-            font-size: 40px;
-            font-weight: bold;
-        }
-    
-        .main-block-h3 {
-            font-size: 16px;
-            letter-spacing: 1.2px;
-        }
-    
-        .main-block-h4 {
-            font-size: 20px;
-            letter-spacing: 1.2px;
-        }
-    
-        .beforeInputCity {
-            text-align: center;
-            padding-top: 10px;
-    
-        }
-    
-        .padding-text {
-            padding: 5px;
-            font-weight: bold;
-            font-size: 10px;
-        }
+  .main-block-h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .main-block-h3 {
+    font-size: 16px;
+    letter-spacing: 1.2px;
+  }
+
+  .main-block-h4 {
+    font-size: 20px;
+    letter-spacing: 1.2px;
+  }
+
+  .beforeInputCity {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .padding-text {
+    padding: 5px;
+    font-weight: bold;
+    font-size: 10px;
+  }
 }

@@ -1,14 +1,13 @@
 #search-input {
-    color: #F8F9FA;
+  color: #f8f9fa;
 }
 
-.collapse.show{
-    width: 100%;
+.collapse.show {
+  width: 100%;
 }
 
-@media (max-width:1000px) {
-    .pos-f-t {
-        height: 0%;
-    }
-
+@media (max-width: 1000px) {
+  .pos-f-t {
+    height: 0%;
+  }
 }

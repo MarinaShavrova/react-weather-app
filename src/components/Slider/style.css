@@ -1,146 +1,141 @@
-.second-layout{
-    height: 100vh;
-    width: 100%;
-    padding-top: 100px;
-    
+.second-layout {
+  height: 100vh;
+  width: 100%;
+  padding-top: 100px;
 }
 
-.second-layout video{
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    top: 100%;
+.second-layout video {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  top: 100%;
 }
 
 .slider-content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    left: 0;
-    top: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 100%;
 }
 
-
-.slider{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: whitesmoke;
-    flex-direction: column;
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: whitesmoke;
+  flex-direction: column;
 }
 
 .slide.active {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
 }
 
 .right-arrow {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    font-size: 3rem;
-    color: azure;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  font-size: 3rem;
+  color: azure;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
 .left-arrow {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    font-size: 3rem;
-    color: azure;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  font-size: 3rem;
+  color: azure;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
-.slider-all-data{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
-    width: 750px;
-    font-size: 15px;
-
+.slider-all-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  width: 750px;
+  font-size: 15px;
 }
 
-.slider-block{
-    text-align: center;
-    padding: 15px;    
+.slider-block {
+  text-align: center;
+  padding: 15px;
 }
 
-.lineChart{
-    width: 450px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-   align-items: center;
-   margin-bottom: 20px;
+.lineChart {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.slider-flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    padding-bottom: 50px; 
+.slider-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
 }
 
-.slider-block-h1{
-    font-size: 46px;
-    font-weight: bold;
+.slider-block-h1 {
+  font-size: 46px;
+  font-weight: bold;
 }
-
 
 @media (max-width: 1000px) {
-    .container.mobile {
-        padding-top: 100px;
-        width: 100%;
-        margin: 0 auto;
-    }
+  .container.mobile {
+    padding-top: 100px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-
-    .slider-block-h1 {
+  .slider-block-h1 {
     font-size: 40px;
     font-weight: bold;
-    }
+  }
 
-    .slider-flex{
-        flex-direction: column;     
-    }
+  .slider-flex {
+    flex-direction: column;
+  }
 
-    .slider-all-data{
-        display: flex;
-        font-size: 12px;
-        justify-content: center;
-        align-items: center;
-    }
+  .slider-all-data {
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .right-arrow,
-    .left-arrow {
-            font-size: 2rem;        
-    }
- 
-    .slider-block {
-        padding: 5px;
-        margin-bottom: 5px;
-     }
-     .slider-all-data{
-        width: 100%;
-     }
+  .right-arrow,
+  .left-arrow {
+    font-size: 2rem;
+  }
 
-  .lineChart{
+  .slider-block {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  .slider-all-data {
+    width: 100%;
+  }
+
+  .lineChart {
     display: none;
   }
 }
